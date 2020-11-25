@@ -20,12 +20,12 @@ export const loadEpisodeList = showId => ({
   payload: showId,
 });
 
-export const loadEpisodeLisSuccess = episodes => ({
+export const loadEpisodeListSuccess = episodes => ({
   type: types.SHOW_EPISODE_LIST_LOAD_SUCCESS,
   payload: episodes,
 });
 
-export const loadEpisodeLisFail = error => ({
+export const loadEpisodeListFail = error => ({
   type: types.SHOW_EPISODE_LIST_LOAD_FAIL,
   error,
 });

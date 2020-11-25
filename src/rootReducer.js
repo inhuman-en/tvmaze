@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import { reducer as showReducer } from './show';
 
 const rootRecucer = combineReducers({
-  show: showReducer,
+  selectedShow: showReducer,
 });
 
 export default rootRecucer;

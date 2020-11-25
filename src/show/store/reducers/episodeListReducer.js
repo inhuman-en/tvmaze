@@ -1,7 +1,7 @@
-import * as types from './actionTypes';
+import * as types from '../actionTypes';
 
 const initialState = {
-  details: null,
+  data: null,
   error: null,
   isLoading: false,
 };
@@ -9,20 +9,20 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   const { type } = action;
   switch (type) {
-    case types.SHOW_DETAILS_LOAD_REQUEST: 
+    case types.SHOW_EPISODE_LIST_LOAD_REQUEST: 
       return {
         ...state,
         isLoading: true,
-        details: null,
+        data: null,
       };
-    case types.SHOW_DETAILS_LOAD_SUCCESS: 
+    case types.SHOW_EPISODE_LIST_LOAD_SUCCESS: 
       const { payload } = action;
       return {
         ...state,
-        details: payload,
+        data: payload,
         isLoading: false,
       };
-    case types.SHOW_DETAILS_LOAD_FAIL:
+    case types.SHOW_EPISODE_LIST_LOAD_FAIL:
       const { error } = action;
       return {
         ...state,
