@@ -1,26 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './App.scss';
 
 import { Header } from './navigation';
-import { ShowRoutes } from './show';
 
-const App = () => {
-  return (
-    <div className="App">
-      <Router>
-        <Header />
-        <Switch>
-          <Route exact path="/">
-            home
-          </Route>
-          <Route path="/show">
-            <ShowRoutes />
-          </Route>
-        </Switch>
-      </Router>
-    </div>
-  );
-};
+import AppRoutes from './AppRoutes';
+
+const App = () => (
+  <div className="App">
+    <Router>
+      <Header />
+      <AppRoutes />
+    </Router>
+  </div>
+);
 
 export default App;
