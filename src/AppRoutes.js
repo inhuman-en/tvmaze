@@ -3,6 +3,7 @@ import { Switch, Redirect, Route } from 'react-router-dom';
 import './App.scss';
 
 import { ShowRoutes } from './show';
+import { EpisodeRoutes } from './episode';
 
 const AppRoutes = () => (
   <Switch>
@@ -11,6 +12,9 @@ const AppRoutes = () => (
     </Route>
     <Route path="/show">
       <ShowRoutes />
+    </Route>
+    <Route path="/episode">
+      <EpisodeRoutes />
     </Route>
   </Switch>
 );

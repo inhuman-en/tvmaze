@@ -14,7 +14,7 @@ const detailsEpic =  (action$, state$, { getJSON }) => action$.pipe(
   tap(action => console.log(action)),
   switchMap(({ payload: showId }) => getJSON(`http://api.tvmaze.com/shows/${showId}`).pipe(
     map(response => loadShowDetailsSuccess(response)),
-    catchError(error => of(loadShowDetailsFail(error)))
+    catchError(({ response: { name }}) => of(loadShowDetailsFail(name)))
   )
 ));
 
@@ -23,7 +23,7 @@ const episodeListEpic =  (action$, state$, { getJSON }) => action$.pipe(
   tap(action => console.log(action)),
   switchMap(({ payload: showId }) => getJSON(`http://api.tvmaze.com/shows/${showId}/episodes`).pipe(
     map(response => loadEpisodeListSuccess(response)),
-    catchError(error => of(loadEpisodeListFail(error)))
+    catchError(({ response: { name }}) => of(loadEpisodeListFail(name)))
   )
 ));
 

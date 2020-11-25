@@ -1,10 +1,20 @@
 import React, {  } from 'react';
-import './ShowDetails.scss';
+import { Link, useRouteMatch, useParams, generatePath } from 'react-router-dom';
 import SanitizedHTML from 'react-sanitized-html';
+import './ShowDetails.scss';
 
 const ShowDetails = ({ data }) => {
-  return <div>
-    <div>{data.name}</div>
+  const { path } = useRouteMatch();
+  const { id } = useParams();
+  const prevPath = generatePath(path, { id: +id-1 });
+  const nextPath = generatePath(path, { id: +id+1 });
+
+return <div>
+    <div>
+      <Link to={prevPath}>Prev</Link>
+      {data.name}
+      <Link to={nextPath}>Next</Link>
+    </div>
     <div>
     <SanitizedHTML html={data.summary} />
     </div>

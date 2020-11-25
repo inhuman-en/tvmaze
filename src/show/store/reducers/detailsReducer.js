@@ -12,6 +12,7 @@ const reducer = createReducer(initialState, (builder) => {
     .addCase(actions.loadShowDetails, (state) => {
       state.isLoading = true;
       state.data = null;
+      state.error = null;
     })
     .addCase(actions.loadShowDetailsSuccess, (state, action) => {
       state.isLoading = false;
