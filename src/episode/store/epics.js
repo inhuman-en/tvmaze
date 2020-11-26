@@ -1,19 +1,13 @@
-import { of } from 'rxjs';
-import { catchError, map, switchMap, tap } from 'rxjs/operators';
-import { ofType } from 'redux-observable'
-import * as types from './actionTypes';
-import {
-  loadEpisodeDetailsSuccess,
-  loadEpisodeDetailsFail,
-} from './actionCreators';
+import { URLS, createFetchEpic } from 'api';
 
-const detailsEpic =  (action$, state$, { getJSON }) => action$.pipe(
-  ofType(types.EPISODE_DETAILS_LOAD_REQUEST),
-  tap(action => console.log(action)),
-  switchMap(({ payload: episodeId }) => getJSON(`http://api.tvmaze.com/episodes/${episodeId}`).pipe(
-    map(response => loadEpisodeDetailsSuccess(response)),
-    catchError(({ response: { name }}) => of(loadEpisodeDetailsFail(name)))
-  )
-));
+import * as types from './actionTypes';
+import { loadEpisodeDetailsSuccess, loadEpisodeDetailsFail } from './actionCreators';
+
+const detailsEpic = createFetchEpic({
+  buildUrl: ({ payload: episodeId }) => `${URLS.episodes}/${episodeId}`,
+  requestActionType: types.EPISODE_DETAILS_LOAD_REQUEST,
+  onSuccess: loadEpisodeDetailsSuccess,
+  onFail: loadEpisodeDetailsFail,
+});
 
 export default detailsEpic;

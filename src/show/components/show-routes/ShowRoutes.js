@@ -1,5 +1,8 @@
 import React from 'react';
 import { Redirect, Route, Switch, useRouteMatch } from 'react-router-dom';
+
+import { HOME } from 'routesConfig';
+
 import ShowPage from '../show-page/ShowPage';
 
 const ShowRoutes = () => {
@@ -7,7 +10,7 @@ const ShowRoutes = () => {
   return (
     <Switch>
       <Route exact path={`${path}`}>
-        <Redirect to={`${path}/1`} />
+        <Redirect to={`${HOME}`} />
       </Route>
       <Route path={`${path}/:id`}>
         <ShowPage />
