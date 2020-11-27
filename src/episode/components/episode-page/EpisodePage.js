@@ -10,6 +10,8 @@ import { useEpisode } from '../../hooks';
 
 import EpisodeDetails from '../episode-details/EpisodeDetails';
 
+// NOTE: pages for show and episode can be based on a single layout
+// extracted as a separate component
 const EpisodePage = () => {
   const { id } = useParams();
   const { data, error } = useEpisode();
@@ -27,7 +29,11 @@ const EpisodePage = () => {
     return <Spinner />;
   }
 
-  return <EpisodeDetails data={data} />;
+  return (
+    <div className="episode-page__main">
+      <EpisodeDetails data={data} />
+    </div>
+  );
 };
 
 export default EpisodePage;

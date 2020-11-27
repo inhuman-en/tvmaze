@@ -11,11 +11,12 @@ import { useShow, useShowNavigation } from '../../hooks';
 import ShowDetails from '../show-details/ShowDetails';
 import EpisodeList from '../episode-list/EpisodeList';
 
+// NOTE: might be extracted to a shared component
 const renderShowNavigation = (prevPath, nextPath) => (
-  <div>
-    <Link to={prevPath}>Prev</Link>
-    <Link to={nextPath}>Next</Link>
-  </div>
+  <nav className="show-page__nav">
+    <Link to={prevPath}>&lt;Prev</Link>
+    <Link to={nextPath}>Next&gt;</Link>
+  </nav>
 );
 
 const renderDetails = (error, isLoading, detailsData, episodeListData) => {
@@ -28,10 +29,10 @@ const renderDetails = (error, isLoading, detailsData, episodeListData) => {
   }
 
   return (
-    <Fragment>
+    <div className="show-page__main">
       <ShowDetails data={detailsData} />
       <EpisodeList data={episodeListData} />
-    </Fragment>
+    </div>
   );
 };
 

@@ -1,0 +1,14 @@
+@import 'normalize-css/normalize.css';
+@import 'variables.scss';
+
+body {
+  margin: 0;
+  font-family: $font__family__primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #000;
+}

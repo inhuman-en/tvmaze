@@ -4,16 +4,17 @@ import './ShowDetails.scss';
 
 const ShowDetails = ({ data }) => {
   return (
-    <div>
-      <div>
-        {data.name}
+    <div className="show-details">
+      <div className="show-details__title">{data.name}</div>
+      <div className="show-details__main">
+        <a className="show-details__main__poster" href={data.image.original} rel="noreferrer" target="_blank">
+          <img src={data.image.medium} alt={data.name} title={data.name} />
+        </a>
+        <div className="show-details__main__description">
+          <SanitizedHTML html={data.summary} 
+  allowedTags={['p', 'b']}  />
+        </div>
       </div>
-      <div>
-        <SanitizedHTML html={data.summary} />
-      </div>
-      <a href={data.image.original} rel="noreferrer" target="_blank">
-        <img src={data.image.medium} alt={data.name} title={data.name} />
-      </a>
     </div>
   );
 };

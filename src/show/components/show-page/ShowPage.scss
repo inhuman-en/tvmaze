@@ -1,0 +1,21 @@
+@import 'style/variables';
+
+$nav__height: 30px;
+$padding: 15px;
+
+.show-page {
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $nav__height;
+    & a {
+      padding: 5px;
+      font-weight: $semibold;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+

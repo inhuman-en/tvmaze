@@ -1,0 +1,9 @@
+@import 'style/variables';
+
+.error-message {
+  min-width: 150px;
+  font-size: $font__size--large;
+  font-weight: $bold;
+  text-align: center;
+  color: $color__message;
+}

@@ -1,0 +1,44 @@
+@import 'style/variables';
+@import 'style/mixins';
+
+$nav__height: 30px;
+$margin: 15px;
+$poster-width: 210px;
+$poster-height: 295px;
+
+.show-details {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    font-size: $font__size--huge;
+    font-weight: $thin;
+  }
+
+  &__main {
+    display: flex;
+    &__poster {
+      display: block;
+      margin: $margin $margin $margin 0;
+      text-align: center;
+      min-width: 210px;
+      min-height: 295px;
+    }
+
+    &__description {
+      line-height: 20px;
+      > * {
+        margin: 0;
+        line-height: 25px;
+        text-align: justify;
+      }
+    }
+  }
+
+  @include md {
+    align-items: center;
+    &__main {
+      flex-direction: column;
+    }
+  }
+}
+

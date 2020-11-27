@@ -1,0 +1,35 @@
+@import 'style/variables';
+
+$header__height: 50px;
+
+.header {
+  position: sticky;
+  top: 0;
+  height: $header__height;
+  background-color: $color__nav;
+  &__navigation {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding-left: 10px;
+    list-style: none;
+
+    &__brand {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      padding: 0 5px;
+      font-size: $font__size--large;
+      font-weight: $bold;
+      & a {
+        color: $color__brand;
+
+        &:hover {
+          color: $color__accent;
+        }
+      }
+    }
+  }
+}

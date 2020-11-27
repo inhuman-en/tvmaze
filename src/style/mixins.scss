@@ -1,0 +1,67 @@
+@import './variables';
+
+@mixin over_lg {
+  @media (min-width: $breakpoint__lg_l) {
+    @content;
+  }
+}
+
+@mixin over_md_m {
+  @media (min-width: $breakpoint__md_m) {
+    @content;
+  }
+}
+
+@mixin lg_l {
+  @media (max-width: $breakpoint__lg_l) {
+    @content;
+  }
+}
+
+@mixin over__md_l {
+  @media (min-width: $breakpoint__md_l) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: $breakpoint__lg) {
+    @content;
+  }
+}
+
+@mixin lg_s {
+  @media (max-width: $breakpoint__lg_s) {
+    @content;
+  }
+}
+
+@mixin md_m {
+  @media (max-width: $breakpoint__md_m) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: $breakpoint__md) {
+    @content;
+  }
+}
+
+@mixin md_s {
+  @media (max-width: $breakpoint__md_s) {
+    @content;
+  }
+}
+
+@mixin sm_l {
+  @media (max-width: $breakpoint__sm_l) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: $breakpoint__sm) {
+    @content;
+  }
+}

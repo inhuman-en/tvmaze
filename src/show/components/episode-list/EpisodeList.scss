@@ -1,0 +1,35 @@
+@import 'style/variables';
+@import 'style/mixins';
+
+$row__height: 40px;
+
+.episode-list {
+  width: 100%;
+
+  &__row {
+    height: $row__height;
+    text-align: left;
+    & td,
+    & th {
+      padding-left: 10px;
+    }
+
+    &__number {
+      margin-right: 10px;
+      font-weight: $semibold;
+    }
+
+    &__episode-name {
+      color: $color__brand;
+      text-decoration: underline;
+    }
+  }
+
+  &__header > &__row {
+    background-color: $color__bg__header;
+  }
+
+  tbody > &__row:nth-child(odd) {
+    background-color: $color__bg;
+  }
+}

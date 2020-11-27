@@ -1,0 +1,54 @@
+@import 'style/variables';
+@import 'style/mixins';
+
+$nav__height: 30px;
+$margin: 15px;
+$poster-width: 250px;
+$poster-height: 140px;
+
+.episode-details {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    font-size: $font__size--large;
+    font-weight: $thin;
+  }
+
+  &__main {
+    display: flex;
+    &__poster {
+      display: block;
+      margin: $margin $margin $margin 0;
+      min-width: $poster-width;
+      min-height: $poster-height;
+      text-align: center;
+    }
+
+    &__noposter {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: $poster-width;
+      min-height: $poster-height;
+      margin: $margin $margin $margin 0;
+      border: 4px dashed $color__message;
+    }
+
+    &__description {
+      line-height: 20px;
+      > * {
+        margin: 0;
+        line-height: 25px;
+        text-align: justify;
+      }
+    }
+  }
+
+  @include md {
+    align-items: center;
+    &__main {
+      flex-direction: column;
+    }
+  }
+}
+
