@@ -4,10 +4,11 @@ exports[`App component should render 1`] = `
 <div
   className="App"
 >
-  <header
-    className="App-header"
-  >
-    Hello
-  </header>
+  <BrowserRouter>
+    <Header />
+    <main>
+      <AppRoutes />
+    </main>
+  </BrowserRouter>
 </div>
 `;

@@ -5,6 +5,13 @@ import EpisodePage from './EpisodePage';
 
 configure({ adapter: new Adapter() });
 
+jest.mock('../../hooks');
+
+jest.mock('react-router-dom', () => ({
+  useParams: () => ({ id: 2 }),
+}));
+jest.mock('react-redux');
+
 describe('EpisodePage component', () => {
   it('should render', () => {
     const result = toJson(shallow(<EpisodePage />));

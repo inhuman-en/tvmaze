@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShowDetails component should render 1`] = `
+<div
+  className="show-details"
+>
+  <div
+    className="show-details__title"
+  >
+    show name
+  </div>
+  <div
+    className="show-details__main"
+  >
+    <a
+      className="show-details__main__poster"
+      href="https://example.com/original"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="show name"
+        src="https://example.com/medium"
+        title="show name"
+      />
+    </a>
+    <div
+      className="show-details__main__description"
+    >
+      <SanitizedHTML
+        allowedTags={
+          Array [
+            "p",
+            "b",
+          ]
+        }
+        html="show summary"
+      />
+    </div>
+  </div>
+</div>
+`;

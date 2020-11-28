@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`episode reducer should return correct state after [EPISODE] EPISODE_DETAILS_LOAD_FAIL action 1`] = `
+Object {
+  "data": null,
+  "error": "Something bad happened",
+  "isLoading": false,
+}
+`;
+
+exports[`episode reducer should return correct state after [EPISODE] EPISODE_DETAILS_LOAD_REQUEST action 1`] = `
+Object {
+  "data": null,
+  "error": null,
+  "isLoading": true,
+}
+`;
+
+exports[`episode reducer should return correct state after [EPISODE] EPISODE_DETAILS_LOAD_SUCCESS action 1`] = `
+Object {
+  "data": Object {
+    "airDate": "2017-04-04",
+    "id": 1,
+    "image": null,
+    "name": "episode name",
+  },
+  "error": null,
+  "isLoading": false,
+}
+`;

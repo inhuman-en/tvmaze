@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EpisodePage component should render 1`] = `
+<div
+  className="episode-page__main"
+>
+  <EpisodeDetails
+    data={
+      Object {
+        "image": Object {
+          "medium": "https://example.com/medium",
+          "original": "https://example.com/original",
+        },
+        "name": "episode name",
+        "summary": "episode summary",
+      }
+    }
+  />
+</div>
+`;

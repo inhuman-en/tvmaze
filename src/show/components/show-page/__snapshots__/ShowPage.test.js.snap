@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShowPage component should render 1`] = `
+<Fragment>
+  <nav
+    className="show-page__nav"
+  >
+    <Link
+      to={1}
+    >
+      &lt;Prev
+    </Link>
+    <Link
+      to={3}
+    >
+      Next&gt;
+    </Link>
+  </nav>
+  <div
+    className="show-page__main"
+  >
+    <ShowDetails
+      data={
+        Object {
+          "id": 2,
+          "name": "show name",
+          "summary": "show summary",
+        }
+      }
+    />
+    <EpisodeList
+      data={Array []}
+    />
+  </div>
+</Fragment>
+`;

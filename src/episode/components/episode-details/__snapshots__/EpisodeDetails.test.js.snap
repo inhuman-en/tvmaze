@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EpisodeDetails component should render 1`] = `
+<div
+  className="episode-details"
+>
+  <div
+    className="episode-details__title"
+  >
+    episode name
+  </div>
+  <div
+    className="episode-details__main"
+  >
+    <a
+      className="episode-details__main__poster"
+      href="https://example.com/original"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="episode name"
+        src="https://example.com/medium"
+        title="episode name"
+      />
+    </a>
+    <div
+      className="episode-details__main__description"
+    >
+      <SanitizedHTML
+        allowedTags={
+          Array [
+            "p",
+            "b",
+          ]
+        }
+        html="episode summary"
+      />
+    </div>
+  </div>
+</div>
+`;

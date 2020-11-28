@@ -6,8 +6,19 @@ import EpisodeDetails from './EpisodeDetails';
 configure({ adapter: new Adapter() });
 
 describe('EpisodeDetails component', () => {
+  const mockProps = {
+    data: {
+      image: {
+        medium: 'https://example.com/medium',
+        original: 'https://example.com/original',
+      },
+      name: 'episode name',
+      summary: 'episode summary',
+    },
+  };
+
   it('should render', () => {
-    const result = toJson(shallow(<EpisodeDetails />));
+    const result = toJson(shallow(<EpisodeDetails {...mockProps} />));
     expect(result).toMatchSnapshot();
   });
 });

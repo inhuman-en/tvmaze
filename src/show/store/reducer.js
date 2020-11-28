@@ -14,7 +14,7 @@ const initialEpisodeListState = {
   isLoading: false,
 };
 
-const detailsReducer = createReducer(initialDetailsState, (builder) => {
+export const detailsReducer = createReducer(initialDetailsState, (builder) => {
   builder
     .addCase(actions.loadShowDetails, (state) => {
       state.isLoading = true;
@@ -32,7 +32,7 @@ const detailsReducer = createReducer(initialDetailsState, (builder) => {
 });
 
 
-const episodeListReducer = createReducer(initialEpisodeListState, (builder) => {
+export const episodeListReducer = createReducer(initialEpisodeListState, (builder) => {
   builder
     .addCase(actions.loadEpisodeList, state => {
       state.isLoading = true;
