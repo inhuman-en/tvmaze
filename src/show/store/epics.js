@@ -5,7 +5,7 @@ import { URLS, createFetchEpic } from 'api';
 import * as types from './actionTypes';
 import { loadShowDetailsSuccess, loadShowDetailsFail, loadEpisodeListSuccess, loadEpisodeListFail } from './actionCreators';
 
-
+// TODO: tests for epics
 const detailsEpic = createFetchEpic({
   buildUrl: ({ payload: showId }) => `${URLS.shows}/${showId}`,
   requestActionType: types.SHOW_DETAILS_LOAD_REQUEST,

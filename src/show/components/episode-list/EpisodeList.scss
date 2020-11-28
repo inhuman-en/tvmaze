@@ -15,13 +15,17 @@ $row__height: 40px;
     }
 
     &__number {
-      margin-right: 10px;
       font-weight: $semibold;
     }
 
     &__episode-name {
       color: $color__brand;
       text-decoration: underline;
+    }
+
+    &__episode-date {
+      font-weight: $bold;
+      width: 130px;
     }
   }
 

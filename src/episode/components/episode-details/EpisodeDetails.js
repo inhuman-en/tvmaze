@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SanitizedHTML from 'react-sanitized-html';
 import { ErrorMessage } from 'shared';
 import './EpisodeDetails.scss';
@@ -26,6 +27,18 @@ const EpisodeDetails = ({ data }) => {
       </div>
     </div>
   );
+};
+
+EpisodeDetails.propTypes = {
+  data: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    summary: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
+    image: PropTypes.shape({
+      original: PropTypes.string,
+      medium: PropTypes.string,
+    })
+  }),
 };
 
 export default EpisodeDetails;

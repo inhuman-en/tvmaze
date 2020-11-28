@@ -1,7 +1,7 @@
 import { useRouteMatch, useParams, generatePath } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-const sortEpisodeList = episodeList => [...episodeList].sort((first, second) => second.id - first.id);
+const sortEpisodeList = episodeList => [...episodeList].sort((first, second) => second.season - first.season - second.number - first.number);
 
 /**
  * hook for generating routes to previous and next shows
