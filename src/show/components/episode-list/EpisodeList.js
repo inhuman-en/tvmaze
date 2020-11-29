@@ -36,13 +36,15 @@ const EpisodeList = ({ data }) => (
 );
 
 EpisodeList.propTypes = {
-  data: PropTypes.arrayOf({
-    name: PropTypes.string.isRequired,
-    season: PropTypes.number.isRequired,
-    number: PropTypes.number.isRequired,
-    id: PropTypes.number.isRequired,
-    airdate: PropTypes.string.isRequired,
-  }),
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      season: PropTypes.number.isRequired,
+      number: PropTypes.number.isRequired,
+      id: PropTypes.number.isRequired,
+      airdate: PropTypes.string.isRequired,
+    }),
+  ),
 };
 
 export default EpisodeList;

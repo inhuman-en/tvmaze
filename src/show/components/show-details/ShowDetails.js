@@ -23,7 +23,7 @@ const ShowDetails = ({ data }) => {
 ShowDetails.propTypes = {
   data: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    summary: PropTypes.number.isRequired,
+    summary: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
     image: PropTypes.shape({
       original: PropTypes.string,
