@@ -28,7 +28,6 @@ export const useShowNavigation = () => {
  * @property {Boolean} show.isLoading - is fetching in progress
  */
 export const useShow = () => {
-  // TODO: extract selectors to separate file, move to reselect
   const { detailsData, episodeListData, error, isLoading } = useSelector((state) => {
     const { data: detailsData, error: detailsError } = state.selectedShow.details;
     const { data: episodeListData, error: episodeListError } = state.selectedShow.episodeList;
